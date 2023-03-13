@@ -7,10 +7,10 @@ from os import makedirs
 def main():
     def validated(desc,type):
             while(True):
-                print(desc)
-                temp = input().strip()
+                print("\n"+desc)
+                temp = input("=> ").strip()
                 if (temp != ""):
-                    if type=='str' and all([i.isalpha() for i in temp.split(" ")]):
+                    if type=='str' and not any([i.isnumeric() for i in list(temp)]):
                         return temp
                     if type=='num' and temp.isnumeric():
                         return temp
@@ -22,7 +22,7 @@ def main():
     makedirs("assignment"+assn_num.zfill(2))
     for i in range(1,int(file_num)+1):
         file_props = [] 
-        print("Generating file no."+str(i))
+        print("\n----------------Generating file no."+str(i)+"------------------------]\n")
         file_props.append(validated("What is the name of the program",'str'))
         file_props.append(validated("What is this program about ?(This program ...)",'str'))
         file_props.append(validated("How many functions does it have ?",'num'))
