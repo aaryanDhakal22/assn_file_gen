@@ -1,0 +1,20 @@
+setup(
+    name="assn-file-gen",
+    version="1.0.0",
+    description="Generate assignment files",
+    long_description=README,
+    long_description_content_type="text/markdown",
+    url="https://github.com/realpython/reader",
+    author="Aaryan Dhakal",
+    author_email="aaryan.dhakal22@gmail.com",
+    license="MIT",
+    classifiers=[
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+    ],
+    packages=["assn_file_gen"],
+    include_package_data=True,
+    install_requires=[],
+    entry_points={"console_scripts": ["aaryan=reader.__main__:main"]},
+)
